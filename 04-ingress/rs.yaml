@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx-rs
+  labels:
+    app: nginx-ingress-demo-rs
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx-ingress-demo-pod-labels
+  template:
+    metadata:
+      labels:
+        app: nginx-ingress-demo-pod-labels
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.25
+          ports:
+            - containerPort: 80

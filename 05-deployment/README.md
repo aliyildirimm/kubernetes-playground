@@ -5,11 +5,14 @@ Understand how a Kubernetes Deployment manages Pods and ensures desired state.
 - Object: Deployment
 - Replicas: 2
 - Image: nginx
-- Label: app=nginx-demo
 
 ## Steps
 ```bash
-kubectl apply -f manifests/deployment.yaml
+kubectl apply -f deployment.yaml
 kubectl get deployment
+
+# You will see that deployment under the hood creates a replicaset
 kubectl get rs
+
+## same for the pods
 kubectl get pods
