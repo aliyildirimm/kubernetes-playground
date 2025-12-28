@@ -4,8 +4,7 @@ metadata:
   name: nginx-ingress
 spec:
   rules:
-    - host: example.local
-      http:
+    - http:
         paths:
           - path: /
             pathType: Prefix

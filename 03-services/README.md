@@ -1,5 +1,6 @@
 ## Goal
 Observe how a Kubernetes Service works.
+You can also call like an INTERNAL LOAD BALANCER.
 
 ## What is deployed
 - ReplicaSet running nginx Pods
