@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx-rs-nodeport-demo
+  labels:
+    app: nginx-nodeport-demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx-nodeport-demo
+  template:
+    metadata:
+      labels:
+        app: nginx-nodeport-demo
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.25
+          ports:
+            - containerPort: 80
