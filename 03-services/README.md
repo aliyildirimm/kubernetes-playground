@@ -34,7 +34,7 @@ kubectl get svc nginx-svc
 # you can also list the endpoints:
 kubectl get endpoints nginx-svc
 
-#however if you try to curl from local you will be unsucesfull but if you enter the cluster it will work. But then how can you? That's the topic we can discuss in INGRESS. For now we can simply port-forward and access to the service.
+#however if you try to curl from local you will be unsuccessful but if you enter the cluster it will work. But then how can you? That's the topic we can discuss in INGRESS. For now we can simply port-forward and access to the service.
 # Port-forward the service to access it from your local machine:
 kubectl port-forward service/nginx-svc 8080:80
 

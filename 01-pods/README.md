@@ -10,7 +10,7 @@ kubectl apply -f pod.yaml
 kubectl get pod nginx-pod -o wide
 
 # Show detailed information about the pod including events and conditions
-## this would also show the events happend until the container started succesfully.
+# this would also show the events happend until the container started succesfully.
 kubectl describe pod nginx-pod
 
 # if you want to remove:
